@@ -212,7 +212,93 @@ header h2 {
     margin-top: 2em;
 }
 
-#projects > div:not(#projects-title) { /* every child except projects-title */
+.project-link {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    font-size: 3em;
+    aspect-ratio: 2 / 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: solid black 2px;
+    background-color: rgba(255, 255, 255, 0.3); /* White color with opacity */
+    background-blend-mode: overlay; /* Blends the background color with the image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds a shadow for better readability */
+    color: black;
+    text-decoration: none; /* Removes the default underline */
+}
+
+.project-link:hover {
+    background-color: transparent; /* Removes the overlay effect */
+    background-blend-mode: normal; /* Reverts to normal blending */
+}
+
+#projects-title {
+    grid-column: 2 / 3; /* Span across all columns */
+    grid-row: 1 / 2;
+    aspect-ratio: 2 / 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    font-size: 5em; 
+    border: solid black 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds a shadow for better readability */
+    background-color: #A2CBE6;
+}
+
+/* Apply specific styles for each project as needed */
+.project-link#project1 {
+    background-image: url(/Portfolio/images/emoji-sweeper.PNG);
+    grid-column: 1 / 2 ;
+    grid-row: 1 / 2;
+}
+
+.project-link#project2 {
+    background-image: url(/Portfolio/images/states-game.PNG);
+    grid-column: 3 / 4 ;
+    grid-row: 1 / 2;
+}
+
+.project-link#project3 {
+    background-image: url(/Portfolio/images/flashy.PNG);
+    grid-column: 1 / 2 ;
+    grid-row: 2 / 3;
+}
+
+.project-link#project4 {
+    background-image: url(/Portfolio/images/turtle.PNG);
+    grid-column: 2 / 3 ;
+    grid-row: 2 / 3;
+}
+
+.project-link#project5 {
+    background-image: url(/Portfolio/images/puzzle-game.PNG);
+    grid-column: 3 / 4 ;
+    grid-row: 2 / 3;
+}
+
+.project-link#project6 {
+    background-image: url(/Portfolio/images/quiz-game.PNG);
+    grid-column: 1 / 2 ;
+    grid-row: 3 / 4;
+}
+
+.project-link#project7 {
+    background-image: url(/Portfolio/images/python.png);
+    grid-column: 2 / 3 ;
+    grid-row: 3 / 4;
+}
+
+.project-link#project8 {
+    background-image: url(/Portfolio/images/mysql-demo.PNG);
+    grid-column: 3 / 4 ;
+    grid-row: 3 / 4;
+}
+
+/* #projects > div:not(#projects-title) {
     aspect-ratio: 2 / 1; 
     background-size: cover;
     background-position: center;
@@ -224,14 +310,14 @@ header h2 {
     align-items: center; 
     text-align: center;
     font-size: 3em; 
-    background-color: rgba(255, 255, 255, 0.3); /* White color with 50% opacity */
-    background-blend-mode: overlay; /* the background color should blend with the background image */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds a shadow for better readability */
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: overlay;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
 }
 
 #projects > div:not(#projects-title):hover {
-    background-color: transparent; /* Removes the overlay effect */
-    background-blend-mode: normal; /* Reverts to normal blending */
+    background-color: transparent; 
+    background-blend-mode: normal; 
 }
 
 #project1 {
@@ -250,7 +336,7 @@ header h2 {
     text-align: center;
     font-size: 5em; 
     border: solid black 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds a shadow for better readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
     background-color: #A2CBE6;
 }
 
@@ -294,7 +380,7 @@ header h2 {
     grid-column: 3 / 4 ;
     grid-row: 3 / 4;
     background-image: url(/Portfolio/images/mysql-demo.PNG);
-}
+} */
 
 #contact {
     display: grid;
