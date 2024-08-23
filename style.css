@@ -1,0 +1,337 @@
+/*Sky Blue: #A2CBE6
+Mountain Gray: #BDC9D1
+Forest Green: #4C6B50
+Lake Blue: #33698B*/
+
+body{
+    background-color: #BDC9D1;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+header {
+    height: 100vh; /* the header section will always take 100% of screen height, regardless of the screen size or resolution. */
+    overflow: hidden; /* prevents any content within the header from spilling out of its bounds. This is particularly useful if the video might extend beyond the header's size */
+    position: relative; /* sets the header as a containing block for absolutely positioned elements (like the video) */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-rows: 1fr 3fr 3fr; /* 4 rows */
+}
+
+header h1, header h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+header video {
+    position: absolute; /* positions the video relative to the header, allowing it to be placed exactly where needed */
+    top: 50%; left: 50%; /* Initially positions the center of the video at the center of the header */
+    width: 100%; height: 100%; /* Stretches the video to cover the entire header area. */     
+    object-fit: cover; /* Ensures the video covers the header completely, cropping any excess parts while maintaining the aspect ratio. */
+    transform: translate(-50%, -50%); /* Offsets the video by half its width and height, perfectly centering it. */
+}
+
+header nav {
+    width: 49.6%;
+    color: black;
+    font-size: 2em;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(255, 255, 255, 0.8); /* Light pastel background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-right: 0.4%;
+}
+
+nav ul {
+    list-style-type: none; /* Removes the default bullet points */
+    display: flex;
+    justify-content: space-around;
+    padding-right: 0.8em;
+    margin: 3%;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none; /* removes the underline */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    background-color: #A2CBE6; 
+}
+
+header h1 {
+    color: white;
+    font-size: 6em;
+    position: absolute; /* positions h1 relative to the header, allowing it to be placed exactly where needed */
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    align-self: center;
+    left: 20%;
+}
+
+header h2 {
+    color: white;
+    font-size: 6em;
+    position: absolute; /* positions h2 relative to the header, allowing it to be placed exactly where needed */
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    align-self: center;
+    left: 10%;
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two columns: wider left, narrower right */
+    grid-template-rows: auto 2fr 1fr; /* Title at the top, larger top section, smaller bottom section */
+    gap: 1.5em; /* Adds space between grid items */
+    margin: 0 auto; /* Center the grid */
+    margin-top: 2em;
+}
+
+/* Title section */
+#about-title {
+    grid-column: 1 / 3; /* Spans both columns */
+    grid-row: 1 / 2; /* First row */
+    text-align: center;
+    font-size: 3em;
+    color: #333;
+    background: #33698B;
+    padding: 0.4em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a shadow for better readability */
+}
+
+/* Details section */
+#about-details {
+    grid-column: 1 / 2; /* First column */
+    grid-row: 2 / 3; /* Second row */
+    background: #A2CBE6;
+    padding: 5em;
+    font-size: 1em;
+    color: #333;
+    line-height: 1.7em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a shadow for better readability */
+}
+
+/* Profile picture section */
+#about-pic {
+    grid-column: 2 / 3; /* Second column */
+    grid-row: 2 / 3; /* Second row */
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A2CBE6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a shadow for better readability */
+}
+
+#about-pic img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Skills section */
+#skills {
+    grid-column: 1 / 2; /* First column */
+    grid-row: 3 / 4; /* Third row */
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-evenly; /* Distribute skills evenly */
+    align-items: center; /* Center skills vertically */
+    padding-left: 20em;
+    padding-right: 20em;
+    gap: 1em;
+    background-color: #33698B;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a shadow for better readability */
+}
+
+.skill img {
+    width: 3em;
+    height: 3em;
+}
+
+/* Status section */
+#status {
+    grid-column: 2 / 3; /* Second column */
+    grid-row: 3 / 4; /* Third row */
+    background-color: #33698B;
+    display: flex;
+    text-align: center;
+    gap: 0.5em;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a shadow for better readability */
+}
+
+#status-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+#status-details {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+#status-light {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    background-color: rgb(122, 182, 32);
+    margin: 0 auto;
+    animation: flash 1s infinite;
+}
+
+/* Define the flashing animation */
+@keyframes flash {
+    0% {
+        background-color: rgb(122, 182, 32); /* Original color */
+    }
+    20% {
+        background-color: white; /* Flashing color (e.g., red) */
+    }
+    100% {
+        background-color: rgb(122, 182, 32); /* Back to original color */
+    }
+}
+#projects {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    width: 90%;
+    margin: 0 auto; /* Center the grid */
+    margin-top: 2em;
+}
+
+#projects > div:not(#projects-title) { /* every child except projects-title */
+    aspect-ratio: 2 / 1; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: solid black 2px;
+    
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    font-size: 3em; 
+    background-color: rgba(255, 255, 255, 0.3); /* White color with 50% opacity */
+    background-blend-mode: overlay; /* the background color should blend with the background image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds a shadow for better readability */
+}
+
+#projects > div:not(#projects-title):hover {
+    background-color: transparent; /* Removes the overlay effect */
+    background-blend-mode: normal; /* Reverts to normal blending */
+}
+
+#project1 {
+    grid-column: 1 / 2 ;
+    grid-row: 1 / 2;
+    background-image: url(/Portfolio/images/emoji-sweeper.PNG);
+}
+
+#projects-title {
+    grid-column: 2 / 3 ;
+    grid-row: 1 / 2;
+    aspect-ratio: 2 / 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    font-size: 5em; 
+    border: solid black 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds a shadow for better readability */
+    background-color: #A2CBE6;
+}
+
+#project2 {
+    grid-column: 3 / 4 ;
+    grid-row: 1 / 2;
+    background-image: url(/Portfolio/images/states-game.PNG);
+}
+
+#project3 {
+    grid-column: 1 / 2 ;
+    grid-row: 2 / 3;
+    background-image: url(/Portfolio/images/flashy.PNG);
+}
+
+#project4 {
+    grid-column: 2 / 3 ;
+    grid-row: 2 / 3;
+    background-image: url(/Portfolio/images/turtle.PNG);
+}
+
+#project5 {
+    grid-column: 3 / 4 ;
+    grid-row: 2 / 3;
+    background-image: url(/Portfolio/images/puzzle-game.PNG);
+}
+
+#project6 {
+    grid-column: 1 / 2 ;
+    grid-row: 3 / 4;
+    background-image: url(/Portfolio/images/quiz-game.PNG);
+}
+
+#project7 {
+    grid-column: 2 / 3 ;
+    grid-row: 3 / 4;
+    background-image: url(/Portfolio/images/expense-tracker.PNG);
+}
+
+#project8 {
+    grid-column: 3 / 4 ;
+    grid-row: 3 / 4;
+    background-image: url(/Portfolio/images/mysql-demo.PNG);
+}
+
+#contact {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 9em;
+    background-color: #33698B;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a shadow for better readability */
+
+}
+
+#contact-title {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+#contact-details {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#contact-details a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    color: white;
+}
+
+#contact-details a:hover {
+    background-color: #A2CBE6;
+}
