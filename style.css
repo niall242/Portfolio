@@ -3,6 +3,10 @@ Mountain Gray: #BDC9D1
 Forest Green: #4C6B50
 Lake Blue: #33698B*/
 
+* {
+    box-sizing: border-box;
+}
+
 body{
     background-color: #BDC9D1;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
@@ -319,90 +323,6 @@ header h2 {
     grid-column: 3 / 4 ;
     grid-row: 3 / 4;
 }
-
-/* #projects > div:not(#projects-title) {
-    aspect-ratio: 2 / 1; 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: solid black 2px;
-    
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    font-size: 3em; 
-    background-color: rgba(255, 255, 255, 0.3);
-    background-blend-mode: overlay;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
-}
-
-#projects > div:not(#projects-title):hover {
-    background-color: transparent; 
-    background-blend-mode: normal; 
-}
-
-#project1 {
-    grid-column: 1 / 2 ;
-    grid-row: 1 / 2;
-    background-image: url(/Portfolio/images/emoji-sweeper.PNG);
-}
-
-#projects-title {
-    grid-column: 2 / 3 ;
-    grid-row: 1 / 2;
-    aspect-ratio: 2 / 1; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    font-size: 5em; 
-    border: solid black 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
-    background-color: #A2CBE6;
-}
-
-#project2 {
-    grid-column: 3 / 4 ;
-    grid-row: 1 / 2;
-    background-image: url(/Portfolio/images/states-game.PNG);
-}
-
-#project3 {
-    grid-column: 1 / 2 ;
-    grid-row: 2 / 3;
-    background-image: url(/Portfolio/images/flashy.PNG);
-}
-
-#project4 {
-    grid-column: 2 / 3 ;
-    grid-row: 2 / 3;
-    background-image: url(/Portfolio/images/turtle.PNG);
-}
-
-#project5 {
-    grid-column: 3 / 4 ;
-    grid-row: 2 / 3;
-    background-image: url(/Portfolio/images/puzzle-game.PNG);
-}
-
-#project6 {
-    grid-column: 1 / 2 ;
-    grid-row: 3 / 4;
-    background-image: url(/Portfolio/images/quiz-game.PNG);
-}
-
-#project7 {
-    grid-column: 2 / 3 ;
-    grid-row: 3 / 4;
-    background-image: url(/Portfolio/images/expense-tracker.PNG);
-}
-
-#project8 {
-    grid-column: 3 / 4 ;
-    grid-row: 3 / 4;
-    background-image: url(/Portfolio/images/mysql-demo.PNG);
-} */
 
 #contact {
     display: grid;
